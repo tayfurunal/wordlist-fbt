@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "de6f1a3f-ee1f-4ec7-a800-dc61177f0968",
+		"name": "Word-List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\":\"test2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\":\"test\",\n \"tr\":\"siyah\",\n \"en\":\"black\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All by User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/posts/test",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/posts?id=5f8d3bc77c1dcfe776dd360f",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f8d3bc77c1dcfe776dd360f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/posts/5f8d3be07c1dcfe776dd3610",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"5f8d3be07c1dcfe776dd3610"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"tr\":\"sil\",\n \"en\":\"delete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wordlist-server-api.herokuapp.com/api/posts/5f8d3bc77c1dcfe776dd360f",
+					"protocol": "https",
+					"host": [
+						"wordlist-server-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"5f8d3bc77c1dcfe776dd360f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
